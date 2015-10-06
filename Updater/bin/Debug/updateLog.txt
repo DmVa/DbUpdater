@@ -1,0 +1,122 @@
+2014-11-19 02:38:06,714 [10] INFO  Updater.App [(null)] - Start update at 19.11.2014 2:38:06
+2014-11-19 02:38:06,766 [10] INFO  Updater.App [(null)] - Read file ..\..\..\Scripts\HF.db.xml, FullName D:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-11-19 02:38:06,785 [10] INFO  Updater.App [(null)] - Got 1 scripts
+2014-11-19 02:38:06,934 [10] INFO  Updater.App [(null)] - Ok.  Executed 0 scripts.Total 1 scripts
+2014-11-19 02:40:16,733 [6] INFO  Updater.App - Start update at 19.11.2014 2:40:16
+2014-11-19 02:40:16,757 [6] INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName D:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-11-19 02:40:16,772 [6] INFO  Updater.App - Got 1 scripts
+2014-11-19 02:40:16,933 [6] INFO  Updater.App - Ok.  Executed 0 scripts.Total 1 scripts
+2014-11-19 02:41:15,651 INFO  Updater.App - Start update at 19.11.2014 2:41:15
+2014-11-19 02:41:15,674 INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName D:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-11-19 02:41:15,689 INFO  Updater.App - Got 1 scripts
+2014-11-19 02:41:15,864 INFO  Updater.App - Ok.  Executed 0 scripts.Total 1 scripts
+2014-11-19 12:43:53,008 INFO  Updater.App - Start update at 19.11.2014 12:43:52
+2014-11-19 12:43:53,036 INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName d:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-11-19 12:43:53,049 INFO  Updater.App - Got 1 scripts
+2014-11-19 12:43:53,231 INFO  Updater.App - Ok.  Executed 0 scripts.Total 1 scripts
+2014-11-19 12:44:15,914 INFO  Updater.App - Start update at 19.11.2014 12:44:15
+2014-11-19 12:44:15,942 INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName d:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-11-19 12:44:15,955 INFO  Updater.App - Got 1 scripts
+2014-11-19 12:44:16,061 INFO  Updater.App - Ok.  Executed 0 scripts.Total 1 scripts
+2014-11-19 12:44:24,165 INFO  Updater.App - Start update at 19.11.2014 12:44:24
+2014-11-19 12:44:24,194 INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName d:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-11-19 12:44:24,207 INFO  Updater.App - Got 1 scripts
+2014-11-19 12:44:24,313 INFO  Updater.App - Ok.  Executed 0 scripts.Total 1 scripts
+2014-11-19 16:38:41,470 ERROR Updater.App - unhandled
+System.Reflection.TargetInvocationException: An exception occurred during the operation, making the result invalid.  Check InnerException for exception details. ---> System.InvalidOperationException: The calling thread cannot access this object because a different thread owns it.
+   at System.Windows.DependencyObject.GetValue(DependencyProperty dp)
+   at System.Windows.Controls.Primitives.ButtonBase.UpdateCanExecute()
+   at Updater.BaseCommand.RaiseCanExecuteChanged(Object parameter) in d:\Projects\DBUpdater\Updater\BaseCommand.cs:line 38
+   at Updater.MainWindowViewModel.set_IsUpdateInProgress(Boolean value) in d:\Projects\DBUpdater\Updater\MainWindowViewModel.cs:line 84
+   at Updater.MainWindowViewModel.<>c__DisplayClass3.<DoUpdate>b__0(Object sender, DoWorkEventArgs args) in d:\Projects\DBUpdater\Updater\MainWindowViewModel.cs:line 62
+   at System.ComponentModel.BackgroundWorker.WorkerThreadStart(Object argument)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary()
+   at System.ComponentModel.RunWorkerCompletedEventArgs.get_Result()
+   at Updater.MainWindowViewModel.<DoUpdate>b__2(Object s, RunWorkerCompletedEventArgs e) in d:\Projects\DBUpdater\Updater\MainWindowViewModel.cs:line 70
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+2014-11-19 16:39:21,053 INFO  Updater.App - Start update at 19.11.2014 16:39:21
+2014-11-19 16:39:21,075 INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName D:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-11-19 16:39:21,088 INFO  Updater.App - Got 1 scripts
+2014-11-19 16:39:21,247 INFO  Updater.App - Ok.  Executed 0 scripts.Total 1 scripts
+2014-11-19 16:39:30,127 INFO  Updater.App - Start update at 19.11.2014 16:39:30
+2014-11-19 16:39:30,148 INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName D:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-11-19 16:39:30,163 INFO  Updater.App - Got 1 scripts
+2014-11-19 16:39:30,333 INFO  Updater.App - Ok.  Executed 0 scripts.Total 1 scripts
+2014-12-23 02:13:48,570 INFO  Updater.App - Start update at 23.12.2014 2:13:48
+2014-12-23 02:13:48,598 INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName D:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-12-23 02:13:48,715 INFO  Updater.App - Got 1 scripts
+2014-12-23 02:14:20,933 ERROR Updater.App - Error:
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at DBUpdater.UpdateManager.CheckIfExistsVerificationTable() in d:\Projects\DBUpdater\DBUpdater\UpdateManager.cs:line 449
+   at DBUpdater.UpdateManager.Update() in d:\Projects\DBUpdater\DBUpdater\UpdateManager.cs:line 40
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+2014-12-23 02:17:09,992 INFO  Updater.App - Start update at 23.12.2014 2:17:09
+2014-12-23 02:17:10,004 INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName D:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-12-23 02:17:10,010 INFO  Updater.App - Got 1 scripts
+2014-12-23 02:17:21,260 ERROR Updater.App - Error:
+System.ApplicationException: Script execution file: D:\Projects\DBUpdater\Scripts\armTestScipts\test.sql failed. The name "test" is not permitted in this context. Valid expressions are constants, constant expressions, and (in some contexts) variables. Column names are not permitted. ---> System.Data.SqlClient.SqlException: The name "test" is not permitted in this context. Valid expressions are constants, constant expressions, and (in some contexts) variables. Column names are not permitted.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DBUpdater.UpdateManager.ExecuteScript(UpdateScript scriptInfo) in d:\Projects\DBUpdater\DBUpdater\UpdateManager.cs:line 416
+   at DBUpdater.UpdateManager.RunScript(UpdateScript script) in d:\Projects\DBUpdater\DBUpdater\UpdateManager.cs:line 153
+   --- End of inner exception stack trace ---
+   at DBUpdater.UpdateManager.RunScript(UpdateScript script) in d:\Projects\DBUpdater\DBUpdater\UpdateManager.cs:line 181
+   at DBUpdater.UpdateManager.RunScripts(List`1 scripts) in d:\Projects\DBUpdater\DBUpdater\UpdateManager.cs:line 123
+   at DBUpdater.UpdateManager.Update() in d:\Projects\DBUpdater\DBUpdater\UpdateManager.cs:line 50
+2014-12-23 02:17:48,873 INFO  Updater.App - Start update at 23.12.2014 2:17:48
+2014-12-23 02:17:48,884 INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName D:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-12-23 02:17:48,890 INFO  Updater.App - Got 1 scripts
+2014-12-23 02:17:48,983 INFO  Updater.App - test.sql Executed. Full file name: D:\Projects\DBUpdater\Scripts\armTestScipts\test.sql
+2014-12-23 02:20:13,082 INFO  Updater.App - Ok.  Executed 1 scripts.Total 1 scripts
+2014-12-23 02:21:18,576 INFO  Updater.App - Start update at 23.12.2014 2:21:18
+2014-12-23 02:21:18,588 INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName D:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-12-23 02:21:18,594 INFO  Updater.App - Got 1 scripts
+2014-12-23 02:21:18,669 INFO  Updater.App - test.sql Executed. Full file name: D:\Projects\DBUpdater\Scripts\armTestScipts\test.sql
+2014-12-23 02:21:24,475 INFO  Updater.App - Ok.  Executed 1 scripts.Total 1 scripts
+2014-12-23 02:34:40,836 INFO  Updater.App - Start update at 23.12.2014 2:34:40
+2014-12-23 02:34:40,847 INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName D:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-12-23 02:34:40,852 INFO  Updater.App - Got 1 scripts
+2014-12-23 02:34:40,924 INFO  Updater.App - test.sql Executed. Full file name: D:\Projects\DBUpdater\Scripts\armTestScipts\test.sql
+2014-12-23 02:35:15,038 INFO  Updater.App - Ok.  Executed 1 scripts.Total 1 scripts
+2014-12-23 02:36:34,548 INFO  Updater.App - Start update at 23.12.2014 2:36:34
+2014-12-23 02:36:34,559 INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName D:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-12-23 02:36:34,565 INFO  Updater.App - Got 1 scripts
+2014-12-23 02:36:34,648 INFO  Updater.App - test.sql Executed. Full file name: D:\Projects\DBUpdater\Scripts\armTestScipts\test.sql
+2014-12-23 02:36:34,671 INFO  Updater.App - Ok.  Executed 1 scripts.Total 1 scripts
+2014-12-23 02:37:03,652 INFO  Updater.App - Start update at 23.12.2014 2:37:03
+2014-12-23 02:37:03,662 INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName D:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-12-23 02:37:03,668 INFO  Updater.App - Got 1 scripts
+2014-12-23 02:37:03,757 INFO  Updater.App - test.sql Executed. Full file name: D:\Projects\DBUpdater\Scripts\armTestScipts\test.sql
+2014-12-23 02:37:03,770 INFO  Updater.App - Ok.  Executed 1 scripts.Total 1 scripts
+2014-12-23 02:37:52,258 INFO  Updater.App - Start update at 23.12.2014 2:37:52
+2014-12-23 02:37:52,270 INFO  Updater.App - Read file ..\..\..\Scripts\HF.db.xml, FullName D:\Projects\DBUpdater\Scripts\HF.db.xml
+2014-12-23 02:37:52,282 INFO  Updater.App - Got 1 scripts
+2014-12-23 02:37:52,363 INFO  Updater.App - test.sql Executed. Full file name: D:\Projects\DBUpdater\Scripts\armTestScipts\test.sql
+2014-12-23 02:37:52,379 INFO  Updater.App - Ok.  Executed 1 scripts.Total 1 scripts
+2015-09-28 15:23:07,118 INFO  Updater.App - Start update at 09/28/2015 3:23:07 PM
+2015-09-28 15:23:15,607 INFO  Updater.App - Read source Directory FullName c:\Precisemd\AllMeds\Site\Sources\DB\
+2015-09-28 15:23:21,800 INFO  Updater.App - Got 275 scripts

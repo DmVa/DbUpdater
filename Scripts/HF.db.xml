@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"  ?>
+<scripts xmlns="urn:dbupdate-schema" >
+  <sqlscript file="test.sql" description="fgh" author="test outside"/>
+</scripts>

@@ -1,0 +1,65 @@
+2015-09-03 11:37:06,694 INFO  Updater.App - Start update at 09/03/2015 11:37:06 AM
+2015-09-03 11:37:06,705 INFO  Updater.App - Read file ..\!AllMeds.db.xml, FullName C:\ToolsProjects\DBUpdater\DBUpdater\Updater\bin\!AllMeds.db.xml
+2015-09-03 11:37:06,749 ERROR Updater.App - Error:
+System.IO.DirectoryNotFoundException: script folder C:\ToolsProjects\DBUpdater\DBUpdater\Updater\bin\scripts\allMeds not found
+   at DBUpdater.UpdateFile.Read() in c:\ToolsProjects\DBUpdater\DBUpdater\DBUpdater\UpdateFile.cs:line 57
+   at DBUpdater.UpdateManager.ReadFile() in c:\ToolsProjects\DBUpdater\DBUpdater\DBUpdater\UpdateManager.cs:line 70
+   at DBUpdater.UpdateManager.Update() in c:\ToolsProjects\DBUpdater\DBUpdater\DBUpdater\UpdateManager.cs:line 40
+2015-09-03 11:38:03,307 INFO  Updater.App - Start update at 09/03/2015 11:38:03 AM
+2015-09-03 11:38:08,178 INFO  Updater.App - Read file ..\!AllMeds.db.xml, FullName C:\ToolsProjects\DBUpdater\DBUpdater\Updater\bin\!AllMeds.db.xml
+2015-09-03 11:38:54,603 INFO  Updater.App - Start update at 09/03/2015 11:38:54 AM
+2015-09-03 11:38:57,484 INFO  Updater.App - Read file ..\..\..\scripts\!AllMeds.db.xml, FullName C:\ToolsProjects\DBUpdater\DBUpdater\scripts\!AllMeds.db.xml
+2015-09-03 11:39:37,199 INFO  Updater.App - Start update at 09/03/2015 11:39:37 AM
+2015-09-03 11:39:39,335 INFO  Updater.App - Read file ..\..\..\scripts\!AllMeds.db.xml, FullName C:\ToolsProjects\DBUpdater\DBUpdater\scripts\!AllMeds.db.xml
+2015-09-03 11:39:39,341 INFO  Updater.App - Got 1 scripts
+2015-09-03 11:40:24,531 INFO  Updater.App - 201509020755250_PatientNotes.sql Executed. Full file name: C:\ToolsProjects\DBUpdater\DBUpdater\scripts\allMeds\201509020755250_PatientNotes.sql
+2015-09-03 11:41:53,608 INFO  Updater.App - Ok.  Executed 1 scripts.Total 1 scripts
+2015-09-03 11:46:06,549 INFO  Updater.App - Start update at 09/03/2015 11:46:06 AM
+2015-09-03 11:46:08,864 INFO  Updater.App - Read file ..\..\..\scripts\!AllMeds.db.xml, FullName C:\ToolsProjects\DBUpdater\DBUpdater\scripts\!AllMeds.db.xml
+2015-09-03 11:46:08,870 INFO  Updater.App - Got 1 scripts
+2015-09-03 11:46:08,926 INFO  Updater.App - Ok.  Executed 0 scripts.Total 1 scripts
+2015-09-28 01:57:08,230 INFO  Updater.App - Start update at 28.09.2015 1:57:08
+2015-09-28 01:57:08,746 ERROR Updater.App - Error:
+System.FormatException: Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+   at System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   at System.String.Format(IFormatProvider provider, String format, Object[] args)
+   at DBUpdater.UpdateManager.ReadFile() in d:\Projects\DbUpdater2\DBUpdater\DBUpdater\DBUpdater\UpdateManager.cs:line 75
+   at DBUpdater.UpdateManager.Update() in d:\Projects\DbUpdater2\DBUpdater\DBUpdater\DBUpdater\UpdateManager.cs:line 40
+2015-09-28 01:58:58,370 INFO  Updater.App - Start update at 28.09.2015 1:58:58
+2015-09-28 01:59:49,946 INFO  Updater.App - Start update at 28.09.2015 1:59:49
+2015-09-28 02:00:09,336 INFO  Updater.App - Read source Directory FullName D:\Projects\DbUpdater2\DBUpdater\DBUpdater\Updater\Scripts\armTestScipts
+2015-09-28 02:00:21,008 ERROR Updater.App - Error:
+System.IO.DirectoryNotFoundException: script folder D:\Projects\DbUpdater2\DBUpdater\DBUpdater\Updater\Scripts\armTestScipts not found
+   at DBUpdater.UpdateDirectory.Read() in d:\Projects\DbUpdater2\DBUpdater\DBUpdater\DBUpdater\UpdateDirecoty.cs:line 53
+   at DBUpdater.UpdateManager.ReadFile() in d:\Projects\DbUpdater2\DBUpdater\DBUpdater\DBUpdater\UpdateManager.cs:line 77
+   at DBUpdater.UpdateManager.Update() in d:\Projects\DbUpdater2\DBUpdater\DBUpdater\DBUpdater\UpdateManager.cs:line 40
+2015-09-28 02:01:34,878 INFO  Updater.App - Start update at 28.09.2015 2:01:34
+2015-09-28 02:01:36,175 INFO  Updater.App - Read source Directory FullName D:\Projects\DbUpdater2\DBUpdater\DBUpdater\Scripts\armTestScipts
+2015-09-28 02:02:45,953 INFO  Updater.App - Start update at 28.09.2015 2:02:45
+2015-09-28 02:02:51,031 INFO  Updater.App - Read source Directory FullName D:\Projects\DbUpdater2\DBUpdater\DBUpdater\Scripts\armTestScipts
+2015-09-28 02:03:39,973 INFO  Updater.App - Start update at 28.09.2015 2:03:39
+2015-09-28 02:03:39,989 INFO  Updater.App - Read source Directory FullName D:\Projects\DbUpdater2\DBUpdater\DBUpdater\Scripts\armTestScipts
+2015-09-28 02:04:06,020 INFO  Updater.App - Got 1 scripts
+2015-09-28 02:04:26,129 ERROR Updater.App - Error:
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at DBUpdater.UpdateManager.CheckIfExistsVerificationTable() in d:\Projects\DbUpdater2\DBUpdater\DBUpdater\DBUpdater\UpdateManager.cs:line 491
+   at DBUpdater.UpdateManager.Update() in d:\Projects\DbUpdater2\DBUpdater\DBUpdater\DBUpdater\UpdateManager.cs:line 40
+ClientConnectionId:00000000-0000-0000-0000-000000000000

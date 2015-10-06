@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="urn:dbupdate-schema"
+	elementFormDefault="qualified"
+	targetNamespace="urn:dbupdate-schema"
+   >
+  <xs:simpleType name="sqlscriptnametype">
+    <xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name ="sqlscripttype">
+    <xs:attribute name="file" type="sqlscriptnametype" use="required" />
+    <xs:attribute name="description" type="xs:string" use="optional" />
+    <xs:attribute name="author" type="xs:string" use="optional" />
+    <xs:attribute name="donotregisterscriptindatabase" type="xs:boolean" use="optional" />
+    <xs:attribute name="donotstorefileextensionindatabase" type="xs:boolean" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name ="initializationVerificationTableType">
+    <xs:sequence>
+      <xs:element name="sqlscript" maxOccurs="unbounded" type ="sqlscripttype"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="scripts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="initializationVerificationTable" minOccurs="0" maxOccurs="1" type ="initializationVerificationTableType"/>
+        <xs:element name="sqlscript" maxOccurs="unbounded" type ="sqlscripttype"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

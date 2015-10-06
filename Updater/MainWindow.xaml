@@ -1,0 +1,13 @@
+﻿<Window x:Class="Updater.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Updater" Height="500" Width="700" WindowStartupLocation="CenterOwner">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="1*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="OutputWindow" TextWrapping="Wrap" IsReadOnly="True" Text="{Binding DisplayText}" VerticalScrollBarVisibility="Auto" />
+        <Button Width="150" Content="Close" Command="{Binding CloseCommand}"  Grid.Row="1"  />
+    </Grid>
+</Window>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"  ?>
+<scripts xmlns="urn:dbupdate-schema" >
+  <initializationVerificationTable>
+    <sqlscript file="DBFileStatuses.sql" />
+    <sqlscript file="DBFileStatuses_Data.sql" />
+    <sqlscript file="DBFiles.sql" />  
+  </initializationVerificationTable>
+  <sqlscript file="Roles.sql" />
+  <sqlscript file="Roles_Data.sql" />
+  <sqlscript file="Users.sql" />
+  <sqlscript file="UserRoles.sql" />
+  <sqlscript file="Users_Data.sql" />
+  <sqlscript file="Projects.sql" />
+  <sqlscript file="Iterations.sql" />
+  <sqlscript file="Iterations_Data.sql" />
+</scripts>
