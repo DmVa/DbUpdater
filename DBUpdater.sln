@@ -35,6 +35,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.0", "4.0", "{FA56BDDF-CE4
 		Lib\Log4Net-1.2.13\4.0\log4net.xml = Lib\Log4Net-1.2.13\4.0\log4net.xml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "allmeds", "allmeds", "{0AE0A7C1-EDED-43DF-AE8F-789FE389C1B1}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\allMeds\test.sql = Scripts\allMeds\test.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,5 +67,6 @@ Global
 		{64E29D15-A571-4AB4-88AB-D26A56C2E871} = {1C085711-A74E-4C2F-96F8-24240D76C16F}
 		{7013AA31-6B80-4D9C-9758-3A0DA2AB9C79} = {97DB5B4D-1727-48CC-85DE-24C0CFCF42C1}
 		{FA56BDDF-CE4C-4824-A820-EE178018567F} = {7013AA31-6B80-4D9C-9758-3A0DA2AB9C79}
+		{0AE0A7C1-EDED-43DF-AE8F-789FE389C1B1} = {0958D8EF-E50E-4BFF-8AE3-1F1ACD2A5915}
 	EndGlobalSection
 EndGlobal

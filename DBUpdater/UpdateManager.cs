@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
@@ -452,10 +453,7 @@ namespace DBUpdater
                 IEnumerable<string> statements = SplitSqlStatements(scriptText);
                 foreach (string statement in statements)
                 {
-                    using (SqlCommand command = new SqlCommand(statement, conn))
-                    {
-                        command.ExecuteNonQuery();
-                    }
+                    ExecuteSqlCommand(statement, conn);
                 }
             }
 
@@ -463,6 +461,33 @@ namespace DBUpdater
             RaiseUpdateProgerss("{0} Executed", scriptInfo.File);
             _log.Log(LogLevel.Info, String.Format("{0} Executed. Full file name: {1}", scriptInfo.File, scriptInfo.FullFileName));
             _executedCount++;
+        }
+
+        private void ExecuteSqlCommand(string statement, SqlConnection connection)
+        {
+            SqlTransaction trans = null;
+
+            try
+            {
+                trans = connection.BeginTransaction();
+
+                SqlCommand command = new SqlCommand(statement, connection, trans);
+                command.CommandTimeout = 2*60;//2 min.
+                command.ExecuteNonQuery();
+                trans.Commit();
+            }
+            catch (Exception ex) //error occurred
+            {
+                if (trans != null)
+                    trans.Rollback();
+
+                throw;
+            }
+            finally
+            {
+                if (trans != null)
+                    trans.Dispose();
+            }
         }
 
         private static IEnumerable<string> SplitSqlStatements(string sqlScript)

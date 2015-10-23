@@ -120,3 +120,49 @@ System.ApplicationException: Script execution file: D:\Projects\DBUpdater\Script
 2015-09-28 15:23:07,118 INFO  Updater.App - Start update at 09/28/2015 3:23:07 PM
 2015-09-28 15:23:15,607 INFO  Updater.App - Read source Directory FullName c:\Precisemd\AllMeds\Site\Sources\DB\
 2015-09-28 15:23:21,800 INFO  Updater.App - Got 275 scripts
+2015-10-23 17:13:52,009 INFO  Updater.App - Start update at 10/23/2015 5:13:52 PM
+2015-10-23 17:14:01,509 INFO  Updater.App - Read source Directory FullName c:\Precisemd\AllMeds\Site\Sources\DB\
+2015-10-23 17:14:01,514 INFO  Updater.App - Got 354 scripts
+2015-10-23 17:21:29,998 INFO  Updater.App - Start update at 10/23/2015 5:21:29 PM
+2015-10-23 17:21:35,396 INFO  Updater.App - Read source Directory FullName c:\Precisemd\AllMeds\Site\Sources\DB\
+2015-10-23 17:21:35,406 INFO  Updater.App - Got 354 scripts
+2015-10-23 17:21:36,743 INFO  Updater.App - Ok.  Executed 0 scripts.Total 354 scripts
+2015-10-23 17:22:48,552 INFO  Updater.App - Start update at 10/23/2015 5:22:48 PM
+2015-10-23 17:22:48,567 INFO  Updater.App - Read source XmlFile FullName C:\ToolsProjects\DBUpdater\scripts\!AllMeds.db.xml
+2015-10-23 17:22:48,575 INFO  Updater.App - Got 1 scripts
+2015-10-23 17:23:21,516 ERROR Updater.App - Error:
+System.ApplicationException: Script execution file: C:\ToolsProjects\DBUpdater\scripts\allMeds\test.sql failed. Invalid object name 'patient'. ---> System.Data.SqlClient.SqlException: Invalid object name 'patient'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DBUpdater.UpdateManager.ExecuteSqlCommand(String statement, SqlConnection connection) in c:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 484
+   at DBUpdater.UpdateManager.ExecuteScript(UpdateScript scriptInfo) in c:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 456
+   at DBUpdater.UpdateManager.RunScript(UpdateScript script) in c:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 161
+   --- End of inner exception stack trace ---
+   at DBUpdater.UpdateManager.RunScript(UpdateScript script) in c:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 187
+   at DBUpdater.UpdateManager.RunScripts(List`1 scripts) in c:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 131
+   at DBUpdater.UpdateManager.Update() in c:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 51
+2015-10-23 17:23:38,115 INFO  Updater.App - Start update at 10/23/2015 5:23:38 PM
+2015-10-23 17:23:38,129 INFO  Updater.App - Read source XmlFile FullName C:\ToolsProjects\DBUpdater\scripts\!AllMeds.db.xml
+2015-10-23 17:23:38,138 INFO  Updater.App - Got 1 scripts
+2015-10-23 17:24:06,384 ERROR Updater.App - Error:
+System.ApplicationException: Script execution file: C:\ToolsProjects\DBUpdater\scripts\allMeds\test.sql failed. Invalid column name 'notexisting_clolumn'. ---> System.Data.SqlClient.SqlException: Invalid column name 'notexisting_clolumn'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DBUpdater.UpdateManager.ExecuteSqlCommand(String statement, SqlConnection connection) in c:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 484
+   at DBUpdater.UpdateManager.ExecuteScript(UpdateScript scriptInfo) in c:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 456
+   at DBUpdater.UpdateManager.RunScript(UpdateScript script) in c:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 161
+   --- End of inner exception stack trace ---
+   at DBUpdater.UpdateManager.RunScript(UpdateScript script) in c:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 187
+   at DBUpdater.UpdateManager.RunScripts(List`1 scripts) in c:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 131
+   at DBUpdater.UpdateManager.Update() in c:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 51
+2015-10-23 17:24:13,626 INFO  Updater.App - Start update at 10/23/2015 5:24:13 PM
+2015-10-23 17:24:13,640 INFO  Updater.App - Read source XmlFile FullName C:\ToolsProjects\DBUpdater\scripts\!AllMeds.db.xml
+2015-10-23 17:24:13,658 INFO  Updater.App - Got 1 scripts
