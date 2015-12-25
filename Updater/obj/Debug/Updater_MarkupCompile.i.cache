@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\ToolsProjects\DBUpdater\Updater\obj\Debug\
+D:\Projects\DBUpdater\Updater\obj\Debug\
 Updater
 none
 false
 DEBUG;TRACE
-C:\ToolsProjects\DBUpdater\Updater\App.xaml
+D:\Projects\DBUpdater\Updater\App.xaml
 11151548125
 
-12466128690
-161162129435
+12786680256
+161736381074
 MainWindow.xaml;
 
 False
