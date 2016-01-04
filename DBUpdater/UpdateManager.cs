@@ -57,7 +57,7 @@ namespace DBUpdater
             catch (Exception ex)
             {
                 _log.LogError("Error:", ex);
-                resultMessage = "Error: " + ex.Message;
+                throw;
             }
 
             RaiseUpdateProgerss(UpdateProgressStatus.Completed, resultMessage);

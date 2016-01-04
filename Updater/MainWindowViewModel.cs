@@ -51,23 +51,68 @@ namespace Updater
 
         public void DoUpdate()
         {
+            var settings = ConfigurationManager.GetSection("DbUpdater") as DbUpdaterConfigurationSection;
+            var multipleSettings = ConfigurationManager.GetSection("DbUpdaterMultipleSource") as DbUpdaterMultipleSourceConfigurationSection;
+            var logger = ApplicationSettings.Current.Logger;
+            if (settings != null)
+            {
+                if (multipleSettings != null && string.IsNullOrEmpty(multipleSettings.ConnectionString))
+                {
+                    multipleSettings.ConnectionString = settings.ConnectionString;
+                }
+                RunSingleUpdate(settings, logger, multipleSettings, 0);
+            }
+            else
+            {
+                RunSingleUpdateFromMultipleInstance(multipleSettings, logger, 0);
+            }
+        }
+
+
+        private void RunSingleUpdateFromMultipleInstance(DbUpdaterMultipleSourceConfigurationSection settings, LogWrapper.ILogger logger, int configurationIndex)
+        {
+            if (settings == null || settings.DbUpdaterConfigurations == null)
+                return;
+            if (configurationIndex >= settings.DbUpdaterConfigurations.Count)
+                return;
+
+            DbUpdaterConfigurationSection currentSettings = settings.DbUpdaterConfigurations[configurationIndex];
+            if (string.IsNullOrEmpty(currentSettings.ConnectionString))
+            {
+                currentSettings.ConnectionString = settings.ConnectionString;
+            }
+
+            RunSingleUpdate(currentSettings, logger, settings, configurationIndex + 1);
+        }
+
+        private void  RunSingleUpdate(DbUpdaterConfigurationSection settings, LogWrapper.ILogger logger, DbUpdaterMultipleSourceConfigurationSection multipleSettings, int configurationIndex)
+        {
             var bw = new BackgroundWorker();
             bw.WorkerReportsProgress = true;
             bw.DoWork += (sender, args) =>
-                             {
-                                 var settings = ConfigurationManager.GetSection("DbUpdater") as DbUpdaterConfigurationSection;
-                                 var updater = new UpdateManager(settings, ApplicationSettings.Current.Logger);
-                                 updater.UpdateProgress += (s, e) => bw.ReportProgress(0, e);
-                                 updater.Update();
-                             };
+            {
+                var updater = new UpdateManager(settings, logger);
+                updater.UpdateProgress += (s, e) => bw.ReportProgress(0, e);
+                updater.Update();
+            };
 
             bw.ProgressChanged += Update_ProgressChanged;
             bw.RunWorkerCompleted += (s, e) =>
-                                         {
-                                             IsUpdateInProgress = false;
-                                             if (e.Result is Exception)
-                                                 throw (Exception) e.Result;
-                                         };
+            {
+                IsUpdateInProgress = false;
+                if (e.Error != null)
+                {
+                    DisplayText += "Error: " + e.Error.Message +Environment.NewLine;
+                    return;
+                }
+                if (e.Cancelled)
+                {
+                    DisplayText += "Cancelled" + Environment.NewLine;
+                    return;
+                }
+
+                RunSingleUpdateFromMultipleInstance(multipleSettings, logger, configurationIndex);
+            };
 
             IsUpdateInProgress = true;
             bw.RunWorkerAsync();

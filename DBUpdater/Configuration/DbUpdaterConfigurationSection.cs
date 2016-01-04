@@ -5,7 +5,12 @@ namespace DBUpdater.Configuration
 {
     public class DbUpdaterConfigurationSection : ConfigurationSection
     {
-        [ConfigurationProperty("ConnectionString", DefaultValue = "", IsRequired = true)]
+        public override bool IsReadOnly()
+        {
+            return false;
+        }
+
+        [ConfigurationProperty("ConnectionString", DefaultValue = "", IsRequired = false)]
         public String ConnectionString
         {
             get { return (String)this["ConnectionString"]; }

@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\DbUpdaterConfigurationElementCollection.cs" />
     <Compile Include="Configuration\DbUpdaterConfigurationSection.cs" />
+    <Compile Include="Configuration\DbUpdaterMultipleSourceConfigurationSection.cs" />
     <Compile Include="Configuration\ScriptFieldsConfigurationElement.cs" />
     <Compile Include="Configuration\ScriptFileStatusConfigurationElement.cs" />
     <Compile Include="Configuration\ScriptsDirectoryConfigurationElement.cs" />
