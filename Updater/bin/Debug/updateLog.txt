@@ -459,3 +459,11 @@ File name: 'C:\ToolsProjects\DBUpdater\Updater\bin\Debug\DbUpdateScript.xsd'
 2016-01-04 15:34:09,591 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
 2016-01-04 15:34:09,591 INFO  Updater.App - Got 1 scripts
 2016-01-04 15:34:09,607 INFO  Updater.App - Ok.  Executed 0 scripts.Total 1 scripts
+2016-01-04 15:47:26,245 INFO  Updater.App - Start update at 01/04/2016 3:47:26 PM
+2016-01-04 15:47:32,501 INFO  Updater.App - Read source XmlFile FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2015\!Pres.db.xml
+2016-01-04 15:47:32,545 INFO  Updater.App - Got 622 scripts
+2016-01-04 15:47:35,533 INFO  Updater.App - Ok.  Executed 0 scripts.Total 622 scripts
+2016-01-04 15:47:42,726 INFO  Updater.App - Start update at 01/04/2016 3:47:42 PM
+2016-01-04 15:47:42,727 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
+2016-01-04 15:47:42,728 INFO  Updater.App - Got 1 scripts
+2016-01-04 15:47:42,745 INFO  Updater.App - Ok.  Executed 0 scripts.Total 1 scripts

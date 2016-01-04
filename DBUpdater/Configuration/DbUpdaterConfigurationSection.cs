@@ -24,7 +24,7 @@ namespace DBUpdater.Configuration
             set { this["UpdateFromXMLEvenIfXMLEmpty"] = value; }
         }
 
-        [ConfigurationProperty("ScriptSource", DefaultValue = ScriptSource.XmlFile, IsRequired = true)]
+        [ConfigurationProperty("ScriptSource", DefaultValue = ScriptSource.XmlFile, IsRequired = false)]
         public ScriptSource ScriptSource
         {
             get { return (ScriptSource)this["ScriptSource"]; }
