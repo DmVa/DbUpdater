@@ -14,3 +14,4 @@ c:\ToolsProjects\DBUpdater\LogWrapper\bin\Debug\log4net.xml
 c:\ToolsProjects\DBUpdater\LogWrapper\bin\Debug\NLog.xml
 c:\ToolsProjects\DBUpdater\LogWrapper\obj\Debug\LogWrapper.dll
 c:\ToolsProjects\DBUpdater\LogWrapper\obj\Debug\LogWrapper.pdb
+C:\ToolsProjects\DBUpdater\LogWrapper\obj\Debug\LogWrapper.csprojResolveAssemblyReference.cache

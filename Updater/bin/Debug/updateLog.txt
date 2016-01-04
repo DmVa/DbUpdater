@@ -433,3 +433,29 @@ System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-s
    at DBUpdater.UpdateManager.Update() in d:\Projects\DBUpdater\DBUpdater\UpdateManager.cs:line 41
 ClientConnectionId:00000000-0000-0000-0000-000000000000
 Error Number:53,State:0,Class:20
+2016-01-04 15:28:52,876 INFO  Updater.App - Start update at 01/04/2016 3:28:52 PM
+2016-01-04 15:29:04,038 INFO  Updater.App - Read source XmlFile FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2015\!Pres.db.xml
+2016-01-04 15:29:36,658 ERROR Updater.App - Error:
+System.IO.FileNotFoundException: XML schema file is not found
+File name: 'C:\ToolsProjects\DBUpdater\Updater\bin\Debug\DbUpdateScript.xsd'
+   at DBUpdater.UpdateFile.Read() in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateFile.cs:line 65
+   at DBUpdater.UpdateManager.ReadFile() in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 77
+   at DBUpdater.UpdateManager.Update() in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 39
+2016-01-04 15:29:52,956 INFO  Updater.App - Start update at 01/04/2016 3:29:52 PM
+2016-01-04 15:29:57,355 INFO  Updater.App - Read source XmlFile FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2015\!Pres.db.xml
+2016-01-04 15:30:01,835 INFO  Updater.App - Got 622 scripts
+2016-01-04 15:30:12,046 INFO  Updater.App - 2016_01_04_1 (alter procedure sp_DuplicateLoanSimple)_ML.sql Executed. Full file name: C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2015\2016_01_04_1 (alter procedure sp_DuplicateLoanSimple)_ML.sql
+2016-01-04 15:30:12,061 INFO  Updater.App - Ok.  Executed 1 scripts.Total 622 scripts
+2016-01-04 15:30:58,895 INFO  Updater.App - Start update at 01/04/2016 3:30:58 PM
+2016-01-04 15:31:19,702 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
+2016-01-04 15:32:07,625 INFO  Updater.App - Got 1 scripts
+2016-01-04 15:33:31,818 INFO  Updater.App - 2016_01_01_01 (test)_DV.sql Executed. Full file name: C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016\2016_01_01_01 (test)_DV.sql
+2016-01-04 15:33:31,834 INFO  Updater.App - Ok.  Executed 1 scripts.Total 1 scripts
+2016-01-04 15:33:58,931 INFO  Updater.App - Start update at 01/04/2016 3:33:58 PM
+2016-01-04 15:34:00,267 INFO  Updater.App - Read source XmlFile FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2015\!Pres.db.xml
+2016-01-04 15:34:00,294 INFO  Updater.App - Got 622 scripts
+2016-01-04 15:34:03,294 INFO  Updater.App - Ok.  Executed 0 scripts.Total 622 scripts
+2016-01-04 15:34:06,606 INFO  Updater.App - Start update at 01/04/2016 3:34:06 PM
+2016-01-04 15:34:09,591 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
+2016-01-04 15:34:09,591 INFO  Updater.App - Got 1 scripts
+2016-01-04 15:34:09,607 INFO  Updater.App - Ok.  Executed 0 scripts.Total 1 scripts

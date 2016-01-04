@@ -31,7 +31,7 @@ namespace DBUpdater.Configuration
             set { this["ScriptSource"] = value; }
         }
 
-        [ConfigurationProperty("ScriptsFiles", IsRequired = true)]
+        [ConfigurationProperty("ScriptsFiles", IsRequired = false)]
         public ScriptsFileConfigurationElement ScriptsFiles
         {
             get { return (ScriptsFileConfigurationElement)this["ScriptsFiles"]; }
