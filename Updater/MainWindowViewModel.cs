@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Configuration;
+using System.Threading;
 using System.Windows;
 using System.Windows.Input;
 
@@ -72,9 +73,16 @@ namespace Updater
         private void RunSingleUpdateFromMultipleInstance(DbUpdaterMultipleSourceConfigurationSection settings, LogWrapper.ILogger logger, int configurationIndex)
         {
             if (settings == null || settings.DbUpdaterConfigurations == null)
+            {
+                OnFinishUpdateProcess(false);
                 return;
+            }
+
             if (configurationIndex >= settings.DbUpdaterConfigurations.Count)
+            {
+                OnFinishUpdateProcess(false);
                 return;
+            }
 
             DbUpdaterConfigurationSection currentSettings = settings.DbUpdaterConfigurations[configurationIndex];
             if (string.IsNullOrEmpty(currentSettings.ConnectionString))
@@ -103,11 +111,13 @@ namespace Updater
                 if (e.Error != null)
                 {
                     DisplayText += "Error: " + e.Error.Message +Environment.NewLine;
+                    OnFinishUpdateProcess(true);
                     return;
                 }
                 if (e.Cancelled)
                 {
                     DisplayText += "Cancelled" + Environment.NewLine;
+                    OnFinishUpdateProcess(true);
                     return;
                 }
 
@@ -116,6 +126,32 @@ namespace Updater
 
             IsUpdateInProgress = true;
             bw.RunWorkerAsync();
+        }
+
+        private void OnFinishUpdateProcess(bool isError)
+        {
+            if (isError || !ApplicationSettings.Current.AutoClose)
+                return;
+
+            // ugly hack for wait some time before close.
+            var bw = new BackgroundWorker();
+            bw.WorkerReportsProgress = false;
+            bw.DoWork += (sender, args) =>
+            {
+                Thread.Sleep(1500);   
+            };
+
+            bw.ProgressChanged += (s,e) => {};
+            bw.RunWorkerCompleted += (s, e) =>
+            {
+                IsUpdateInProgress = false;
+                Application.Current.Shutdown();
+            };
+
+            IsUpdateInProgress = true;
+            bw.RunWorkerAsync();
+
+           
         }
 
         protected bool IsUpdateInProgress

@@ -467,3 +467,116 @@ File name: 'C:\ToolsProjects\DBUpdater\Updater\bin\Debug\DbUpdateScript.xsd'
 2016-01-04 15:47:42,727 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
 2016-01-04 15:47:42,728 INFO  Updater.App - Got 1 scripts
 2016-01-04 15:47:42,745 INFO  Updater.App - Ok.  Executed 0 scripts.Total 1 scripts
+2016-01-12 18:27:25,521 INFO  Updater.App - Start update at 01/12/2016 6:27:25 PM
+2016-01-12 18:27:25,530 INFO  Updater.App - Read source XmlFile FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2015\!Pres.db.xml
+2016-01-12 18:27:25,570 INFO  Updater.App - Got 624 scripts
+2016-01-12 18:27:27,938 INFO  Updater.App - Ok.  Executed 0 scripts.Total 624 scripts
+2016-01-12 18:27:32,019 INFO  Updater.App - Start update at 01/12/2016 6:27:32 PM
+2016-01-12 18:27:32,020 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
+2016-01-12 18:27:32,021 INFO  Updater.App - Got 8 scripts
+2016-01-12 18:29:00,859 INFO  Updater.App - Start update at 01/12/2016 6:29:00 PM
+2016-01-12 18:29:00,868 INFO  Updater.App - Read source XmlFile FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2015\!Pres.db.xml
+2016-01-12 18:29:00,905 INFO  Updater.App - Got 624 scripts
+2016-01-12 18:29:03,317 INFO  Updater.App - Ok.  Executed 0 scripts.Total 624 scripts
+2016-01-12 18:29:15,988 INFO  Updater.App - Start update at 01/12/2016 6:29:15 PM
+2016-01-12 18:29:15,989 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
+2016-01-12 18:29:15,991 INFO  Updater.App - Got 8 scripts
+2016-01-12 18:30:17,738 INFO  Updater.App - Start update at 01/12/2016 6:30:17 PM
+2016-01-12 18:30:17,747 INFO  Updater.App - Read source XmlFile FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2015\!Pres.db.xml
+2016-01-12 18:30:17,780 INFO  Updater.App - Got 624 scripts
+2016-01-12 18:30:20,095 INFO  Updater.App - Ok.  Executed 0 scripts.Total 624 scripts
+2016-01-12 18:30:21,455 INFO  Updater.App - Start update at 01/12/2016 6:30:21 PM
+2016-01-12 18:30:21,456 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
+2016-01-12 18:30:21,457 INFO  Updater.App - Got 8 scripts
+2016-01-12 18:30:32,156 ERROR Updater.App - Error:
+System.ApplicationException: Script execution file: C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016\2016-01-05-03 (PRES-1418 add column IsRunBatch in table ReportStructure)-ML.sql failed. Could not find stored procedure 'RAISE'. ---> System.Data.SqlClient.SqlException: Could not find stored procedure 'RAISE'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DBUpdater.UpdateManager.ExecuteSqlCommand(String statement, SqlConnection connection) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 484
+   at DBUpdater.UpdateManager.ExecuteScript(UpdateScript scriptInfo) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 456
+   at DBUpdater.UpdateManager.RunScript(UpdateScript script) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 161
+   --- End of inner exception stack trace ---
+   at DBUpdater.UpdateManager.RunScript(UpdateScript script) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 187
+   at DBUpdater.UpdateManager.RunScripts(List`1 scripts) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 131
+   at DBUpdater.UpdateManager.Update() in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 51
+2016-01-12 18:31:09,282 INFO  Updater.App - Start update at 01/12/2016 6:31:09 PM
+2016-01-12 18:31:09,291 INFO  Updater.App - Read source XmlFile FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2015\!Pres.db.xml
+2016-01-12 18:31:09,324 INFO  Updater.App - Got 624 scripts
+2016-01-12 18:31:11,666 INFO  Updater.App - Ok.  Executed 0 scripts.Total 624 scripts
+2016-01-12 18:31:56,023 INFO  Updater.App - Start update at 01/12/2016 6:31:56 PM
+2016-01-12 18:31:56,025 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
+2016-01-12 18:31:56,027 INFO  Updater.App - Got 8 scripts
+2016-01-12 18:32:04,044 ERROR Updater.App - Error:
+System.ApplicationException: Script execution file: C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016\2016-01-05-03 (PRES-1418 add column IsRunBatch in table ReportStructure)-ML.sql failed. Could not find stored procedure 'RAISE'. ---> System.Data.SqlClient.SqlException: Could not find stored procedure 'RAISE'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DBUpdater.UpdateManager.ExecuteSqlCommand(String statement, SqlConnection connection) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 484
+   at DBUpdater.UpdateManager.ExecuteScript(UpdateScript scriptInfo) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 456
+   at DBUpdater.UpdateManager.RunScript(UpdateScript script) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 161
+   --- End of inner exception stack trace ---
+   at DBUpdater.UpdateManager.RunScript(UpdateScript script) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 187
+   at DBUpdater.UpdateManager.RunScripts(List`1 scripts) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 131
+   at DBUpdater.UpdateManager.Update() in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 51
+2016-01-12 19:05:16,148 INFO  Updater.App - Start update at 01/12/2016 7:05:16 PM
+2016-01-12 19:05:16,157 INFO  Updater.App - Read source XmlFile FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2015\!Pres.db.xml
+2016-01-12 19:05:16,192 INFO  Updater.App - Got 624 scripts
+2016-01-12 19:05:18,514 INFO  Updater.App - Ok.  Executed 0 scripts.Total 624 scripts
+2016-01-12 19:05:20,173 INFO  Updater.App - Start update at 01/12/2016 7:05:20 PM
+2016-01-12 19:05:20,173 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
+2016-01-12 19:05:20,175 INFO  Updater.App - Got 8 scripts
+2016-01-12 19:05:23,873 ERROR Updater.App - Error:
+System.ApplicationException: Script execution file: C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016\2016-01-05-03 (PRES-1418 add column IsRunBatch in table ReportStructure)-ML.sql failed. Could not find stored procedure 'RAISE'. ---> System.Data.SqlClient.SqlException: Could not find stored procedure 'RAISE'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DBUpdater.UpdateManager.ExecuteSqlCommand(String statement, SqlConnection connection) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 484
+   at DBUpdater.UpdateManager.ExecuteScript(UpdateScript scriptInfo) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 456
+   at DBUpdater.UpdateManager.RunScript(UpdateScript script) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 161
+   --- End of inner exception stack trace ---
+   at DBUpdater.UpdateManager.RunScript(UpdateScript script) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 187
+   at DBUpdater.UpdateManager.RunScripts(List`1 scripts) in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 131
+   at DBUpdater.UpdateManager.Update() in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 51
+2016-01-12 19:05:49,768 INFO  Updater.App - Start update at 01/12/2016 7:05:49 PM
+2016-01-12 19:05:49,776 INFO  Updater.App - Read source XmlFile FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2015\!Pres.db.xml
+2016-01-12 19:05:49,808 INFO  Updater.App - Got 624 scripts
+2016-01-12 19:05:52,167 INFO  Updater.App - Ok.  Executed 0 scripts.Total 624 scripts
+2016-01-12 19:06:04,028 INFO  Updater.App - Start update at 01/12/2016 7:06:04 PM
+2016-01-12 19:06:04,029 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
+2016-01-12 19:06:04,031 INFO  Updater.App - Got 8 scripts
+2016-01-12 19:06:04,977 INFO  Updater.App - 2016-01-05-03 (PRES-1418 add column IsRunBatch in table ReportStructure)-ML.sql Executed. Full file name: C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016\2016-01-05-03 (PRES-1418 add column IsRunBatch in table ReportStructure)-ML.sql
+2016-01-12 19:06:04,993 INFO  Updater.App - Ok.  Executed 1 scripts.Total 8 scripts
+2016-01-12 19:06:52,029 INFO  Updater.App - Start update at 01/12/2016 7:06:52 PM
+2016-01-12 19:06:52,037 INFO  Updater.App - Read source XmlFile FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2015\!Pres.db.xml
+2016-01-12 19:06:52,070 INFO  Updater.App - Got 624 scripts
+2016-01-12 19:06:54,403 INFO  Updater.App - Ok.  Executed 0 scripts.Total 624 scripts
+2016-01-12 19:07:07,148 INFO  Updater.App - Start update at 01/12/2016 7:07:07 PM
+2016-01-12 19:07:07,149 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
+2016-01-12 19:07:07,151 INFO  Updater.App - Got 8 scripts
+2016-01-12 19:07:07,186 INFO  Updater.App - Ok.  Executed 0 scripts.Total 8 scripts
+2016-01-12 19:07:28,458 INFO  Updater.App - Start update at 01/12/2016 7:07:28 PM
+2016-01-12 19:07:28,492 INFO  Updater.App - Read source XmlFile FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2015\!Pres.db.xml
+2016-01-12 19:07:28,530 INFO  Updater.App - Got 624 scripts
+2016-01-12 19:07:30,832 INFO  Updater.App - Ok.  Executed 0 scripts.Total 624 scripts
+2016-01-12 19:07:30,833 INFO  Updater.App - Start update at 01/12/2016 7:07:30 PM
+2016-01-12 19:07:30,833 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
+2016-01-12 19:07:30,835 INFO  Updater.App - Got 8 scripts
+2016-01-12 19:07:30,868 INFO  Updater.App - Ok.  Executed 0 scripts.Total 8 scripts
+2016-01-12 19:14:39,240 INFO  Updater.App - Start update at 01/12/2016 7:14:39 PM
+2016-01-12 19:14:39,254 INFO  Updater.App - Read source XmlFile FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2015\!Pres.db.xml
+2016-01-12 19:14:39,288 INFO  Updater.App - Got 624 scripts
+2016-01-12 19:14:41,683 INFO  Updater.App - Ok.  Executed 0 scripts.Total 624 scripts
+2016-01-12 19:14:41,684 INFO  Updater.App - Start update at 01/12/2016 7:14:41 PM
+2016-01-12 19:14:41,684 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
+2016-01-12 19:14:41,686 INFO  Updater.App - Got 8 scripts
+2016-01-12 19:14:41,721 INFO  Updater.App - Ok.  Executed 0 scripts.Total 8 scripts

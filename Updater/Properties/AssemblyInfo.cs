@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("DBUpdater")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("DmVa")]
+[assembly: AssemblyCompany("D")]
 [assembly: AssemblyProduct("DBUpdater")]
-[assembly: AssemblyCopyright("Copyright DmVa DBUpdater ©  2015")]
+[assembly: AssemblyCopyright("Copyright D DBUpdater ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: log4net.Config.XmlConfigurator(Watch = false)]
@@ -52,5 +52,5 @@ using System.Windows;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.5")]
-[assembly: AssemblyFileVersion("1.0.0.5")]
+[assembly: AssemblyVersion("1.0.0.6")]
+[assembly: AssemblyFileVersion("1.0.0.6")]
