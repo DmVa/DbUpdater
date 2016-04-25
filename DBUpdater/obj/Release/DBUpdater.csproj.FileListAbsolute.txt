@@ -42,3 +42,14 @@ c:\ToolsProjects\DBUpdater\DBUpdater\bin\Release\NLog.xml
 c:\ToolsProjects\DBUpdater\DBUpdater\obj\Release\DBUpdater.csprojResolveAssemblyReference.cache
 c:\ToolsProjects\DBUpdater\DBUpdater\obj\Release\DBUpdater.dll
 c:\ToolsProjects\DBUpdater\DBUpdater\obj\Release\DBUpdater.pdb
+C:\Projects\DbUpdater\DBUpdater\bin\Release\DBUpdater.dll
+C:\Projects\DbUpdater\DBUpdater\bin\Release\DBUpdater.pdb
+C:\Projects\DbUpdater\DBUpdater\bin\Release\LogWrapper.dll
+C:\Projects\DbUpdater\DBUpdater\bin\Release\log4net.dll
+C:\Projects\DbUpdater\DBUpdater\bin\Release\NLog.dll
+C:\Projects\DbUpdater\DBUpdater\bin\Release\LogWrapper.pdb
+C:\Projects\DbUpdater\DBUpdater\bin\Release\log4net.xml
+C:\Projects\DbUpdater\DBUpdater\bin\Release\NLog.xml
+C:\Projects\DbUpdater\DBUpdater\obj\Release\DBUpdater.csprojResolveAssemblyReference.cache
+C:\Projects\DbUpdater\DBUpdater\obj\Release\DBUpdater.dll
+C:\Projects\DbUpdater\DBUpdater\obj\Release\DBUpdater.pdb

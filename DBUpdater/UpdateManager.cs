@@ -469,12 +469,19 @@ namespace DBUpdater
 
             try
             {
-                trans = connection.BeginTransaction();
+
+                if (statement.IndexOf("FULLTEXT CATALOG", StringComparison.OrdinalIgnoreCase) < 0 &&
+                    statement.IndexOf("FULLTEXT INDEX ON", StringComparison.OrdinalIgnoreCase) < 0)
+                {
+                    trans = connection.BeginTransaction();
+                }
 
                 SqlCommand command = new SqlCommand(statement, connection, trans);
                 command.CommandTimeout = 2*60;//2 min.
                 command.ExecuteNonQuery();
-                trans.Commit();
+
+                if(trans != null)
+                    trans.Commit();
             }
             catch (Exception ex) //error occurred
             {
