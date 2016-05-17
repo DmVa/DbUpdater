@@ -580,3 +580,39 @@ System.ApplicationException: Script execution file: C:\Precisemd\YMG\Trunk\sql\C
 2016-01-12 19:14:41,684 INFO  Updater.App - Read source Directory FullName C:\Precisemd\YMG\Trunk\sql\Change Scripts\Scripts2016
 2016-01-12 19:14:41,686 INFO  Updater.App - Got 8 scripts
 2016-01-12 19:14:41,721 INFO  Updater.App - Ok.  Executed 0 scripts.Total 8 scripts
+2016-05-17 21:43:33,694 INFO  Updater.App - Start update at 05/17/2016 9:43:33 PM
+2016-05-17 21:43:33,745 ERROR Updater.App - Error:
+System.ArgumentException: The path is not of a legal form.
+   at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.GetFullPathInternal(String path)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at DBUpdater.UpdateFile.get_FullSourceName() in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateFile.cs:line 27
+   at DBUpdater.UpdateManager.ReadFile() in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 76
+   at DBUpdater.UpdateManager.Update() in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 39
+2016-05-17 21:44:29,496 INFO  Updater.App - Start update at 05/17/2016 9:44:29 PM
+2016-05-17 21:45:00,014 ERROR Updater.App - Error:
+System.ArgumentException: The path is not of a legal form.
+   at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.GetFullPathInternal(String path)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at DBUpdater.UpdateFile.get_FullSourceName() in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateFile.cs:line 27
+   at DBUpdater.UpdateManager.ReadFile() in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 76
+   at DBUpdater.UpdateManager.Update() in C:\ToolsProjects\DBUpdater\DBUpdater\UpdateManager.cs:line 39
+2016-05-17 21:45:35,963 INFO  Updater.App - Start update at 05/17/2016 9:45:35 PM
+2016-05-17 21:49:02,607 INFO  Updater.App - Start update at 05/17/2016 9:49:02 PM
+2016-05-17 21:49:05,898 INFO  Updater.App - Read source Directory FullName c:\ToolsProjects\DBUpdater\Scripts\allMeds
+2016-05-17 21:49:05,907 INFO  Updater.App - Got 1 scripts
+2016-05-17 21:49:51,754 INFO  Updater.App - Start update at 05/17/2016 9:49:51 PM
+2016-05-17 21:49:53,214 INFO  Updater.App - Read source Directory FullName c:\ToolsProjects\DBUpdater\Scripts\allMeds
+2016-05-17 21:49:53,218 INFO  Updater.App - Got 1 scripts
+2016-05-17 21:53:55,553 INFO  Updater.App - Start update at 05/17/2016 9:53:55 PM
+2016-05-17 21:53:56,957 INFO  Updater.App - Read source Directory FullName c:\ToolsProjects\DBUpdater\Scripts\allMeds
+2016-05-17 21:53:56,961 INFO  Updater.App - Got 1 scripts
+2016-05-17 21:54:36,888 INFO  Updater.App - Start update at 05/17/2016 9:54:36 PM
+2016-05-17 21:54:38,533 INFO  Updater.App - Read source Directory FullName c:\ToolsProjects\DBUpdater\Scripts\allMeds
+2016-05-17 21:54:38,536 INFO  Updater.App - Got 1 scripts
+2016-05-17 21:55:18,962 INFO  Updater.App - Start update at 05/17/2016 9:55:18 PM
+2016-05-17 21:55:20,358 INFO  Updater.App - Read source Directory FullName c:\ToolsProjects\DBUpdater\Scripts\allMeds
+2016-05-17 21:55:20,361 INFO  Updater.App - Got 1 scripts
+2016-05-17 21:55:40,300 INFO  Updater.App - test.sql Executed. Full file name: c:\ToolsProjects\DBUpdater\Scripts\allMeds\test.sql
+2016-05-17 21:55:40,359 INFO  Updater.App - Ok.  Executed 1 scripts.Total 1 scripts

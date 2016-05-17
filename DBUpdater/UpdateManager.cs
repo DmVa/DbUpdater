@@ -485,10 +485,17 @@ namespace DBUpdater
             }
             catch (Exception ex) //error occurred
             {
-                if (trans != null)
-                    trans.Rollback();
-
-                throw;
+                bool shouldNotRoolback = ex.Message != null && ex.Message == "This SqlTransaction has completed; it is no longer usable.";
+                
+                if (trans != null && !shouldNotRoolback)
+                {
+                        trans.Rollback();
+                }
+                    
+                if (!shouldNotRoolback)
+                {
+                    throw;
+                }
             }
             finally
             {

@@ -1,3 +1,4 @@
-﻿select Id from patients
-GO
-select notexisting_clolumn from patients
+﻿select 1 as ID
+COMMIT TRANSACTION
+
+
