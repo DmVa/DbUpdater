@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Updater", "Updater\Updater.csproj", "{4F4E1F23-0C1E-405A-BFF3-704574E0FF69}"
 EndProject
@@ -40,6 +40,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "allmeds", "allmeds", "{0AE0
 		Scripts\allMeds\test.sql = Scripts\allMeds\test.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Updater.Console", "Updater.Console\Updater.Console.csproj", "{9EA1C097-0A1B-4097-9CF3-FF310C9259C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{08ADFA85-F74A-495D-88CD-A7B4577D44FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08ADFA85-F74A-495D-88CD-A7B4577D44FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08ADFA85-F74A-495D-88CD-A7B4577D44FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EA1C097-0A1B-4097-9CF3-FF310C9259C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA1C097-0A1B-4097-9CF3-FF310C9259C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA1C097-0A1B-4097-9CF3-FF310C9259C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA1C097-0A1B-4097-9CF3-FF310C9259C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

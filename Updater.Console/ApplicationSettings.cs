@@ -1,7 +1,7 @@
 ﻿using DBUpdater.Configuration;
 using LogWrapper;
 
-namespace Updater
+namespace Updater.Console
 {
     public class ApplicationSettings
     {

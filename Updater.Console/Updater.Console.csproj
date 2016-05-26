@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{59BCA464-6CAB-4E69-B6CA-68FE08CEAAC6}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{9EA1C097-0A1B-4097-9CF3-FF310C9259C5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DBUpdater</RootNamespace>
-    <AssemblyName>DBUpdater</AssemblyName>
+    <RootNamespace>Updater.Console</RootNamespace>
+    <AssemblyName>Updater.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -21,18 +21,21 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=97cad7be6df2ed82, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Log4Net-1.2.13\4.0\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -40,35 +43,28 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\CommandLineArgument.cs" />
-    <Compile Include="Configuration\CommandLineParams.cs" />
-    <Compile Include="Configuration\DbUpdaterConfigurationElementCollection.cs" />
-    <Compile Include="Configuration\DbUpdaterConfigurationSection.cs" />
-    <Compile Include="Configuration\DbUpdaterMultipleSourceConfigurationSection.cs" />
-    <Compile Include="Configuration\ScriptFieldsConfigurationElement.cs" />
-    <Compile Include="Configuration\ScriptFileStatusConfigurationElement.cs" />
-    <Compile Include="Configuration\ScriptsDirectoryConfigurationElement.cs" />
-    <Compile Include="Configuration\ScriptsFileConfigurationElement.cs" />
-    <Compile Include="Configuration\ScriptSource.cs" />
-    <Compile Include="FileHelper.cs" />
-    <Compile Include="IFileProvider.cs" />
-    <Compile Include="ScriptFileData.cs" />
-    <Compile Include="Configuration\ScriptsDbTableConfigurationElement.cs" />
-    <Compile Include="UpdateDirecoty.cs" />
-    <Compile Include="UpdateProgressEventArgs.cs" />
-    <Compile Include="UpdateScript.cs" />
-    <Compile Include="UpdateFile.cs" />
-    <Compile Include="UpdateManager.cs" />
+    <Compile Include="ApplicationSettings.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DBUpdater\DBUpdater.csproj">
+      <Project>{59bca464-6cab-4e69-b6ca-68fe08ceaac6}</Project>
+      <Name>DBUpdater</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogWrapper\LogWrapper.csproj">
       <Project>{08adfa85-f74a-495d-88cd-a7b4577d44fa}</Project>
       <Name>LogWrapper</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Updater\App.config">
+      <Link>App.config</Link>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
