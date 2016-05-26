@@ -24,6 +24,11 @@ namespace Updater.Console
             var logger = ApplicationSettings.Current.Logger;
             var commandLineParams = ApplicationSettings.Current.CommandLineParams;
 
+            if (!string.IsNullOrEmpty(commandLineParams.ConnectionString))
+            {
+                settings.ConnectionString = commandLineParams.ConnectionString;
+            }
+
             var updater = new UpdateManager(settings, logger, commandLineParams);
             updater.UpdateProgress += (s, e) =>
             {
