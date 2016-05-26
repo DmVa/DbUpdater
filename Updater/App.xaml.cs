@@ -55,7 +55,7 @@ namespace Updater
             if (string.IsNullOrEmpty(param))
                 return null;
             param = param.TrimStart('/');
-            string[] pr = param.Split('=');
+            string[] pr = param.Split(new[] { '=' }, 2);
             if (pr.Length < 1)
                 return null;
             CommandLineArgument result = new CommandLineArgument();
