@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\CommandLineArgument.cs" />
+    <Compile Include="Configuration\CommandLineParams.cs" />
     <Compile Include="Configuration\DbUpdaterConfigurationElementCollection.cs" />
     <Compile Include="Configuration\DbUpdaterConfigurationSection.cs" />
     <Compile Include="Configuration\DbUpdaterMultipleSourceConfigurationSection.cs" />

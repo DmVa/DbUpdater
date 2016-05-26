@@ -55,22 +55,23 @@ namespace Updater
             var settings = ConfigurationManager.GetSection("DbUpdater") as DbUpdaterConfigurationSection;
             var multipleSettings = ConfigurationManager.GetSection("DbUpdaterMultipleSource") as DbUpdaterMultipleSourceConfigurationSection;
             var logger = ApplicationSettings.Current.Logger;
+            var commandLineParams = ApplicationSettings.Current.CommandLineParams;
             if (settings != null)
             {
                 if (multipleSettings != null && string.IsNullOrEmpty(multipleSettings.ConnectionString))
                 {
                     multipleSettings.ConnectionString = settings.ConnectionString;
                 }
-                RunSingleUpdate(settings, logger, multipleSettings, 0);
+                RunSingleUpdate(settings, logger, multipleSettings, 0, commandLineParams);
             }
             else
             {
-                RunSingleUpdateFromMultipleInstance(multipleSettings, logger, 0);
+                RunSingleUpdateFromMultipleInstance(multipleSettings, logger, 0, commandLineParams);
             }
         }
 
 
-        private void RunSingleUpdateFromMultipleInstance(DbUpdaterMultipleSourceConfigurationSection settings, LogWrapper.ILogger logger, int configurationIndex)
+        private void RunSingleUpdateFromMultipleInstance(DbUpdaterMultipleSourceConfigurationSection settings, LogWrapper.ILogger logger, int configurationIndex, CommandLineParams commandLineParams)
         {
             if (settings == null || settings.DbUpdaterConfigurations == null)
             {
@@ -90,16 +91,16 @@ namespace Updater
                 currentSettings.ConnectionString = settings.ConnectionString;
             }
 
-            RunSingleUpdate(currentSettings, logger, settings, configurationIndex + 1);
+            RunSingleUpdate(currentSettings, logger, settings, configurationIndex + 1, commandLineParams);
         }
 
-        private void  RunSingleUpdate(DbUpdaterConfigurationSection settings, LogWrapper.ILogger logger, DbUpdaterMultipleSourceConfigurationSection multipleSettings, int configurationIndex)
+        private void  RunSingleUpdate(DbUpdaterConfigurationSection settings, LogWrapper.ILogger logger, DbUpdaterMultipleSourceConfigurationSection multipleSettings, int configurationIndex, CommandLineParams commandLineParams)
         {
             var bw = new BackgroundWorker();
             bw.WorkerReportsProgress = true;
             bw.DoWork += (sender, args) =>
             {
-                var updater = new UpdateManager(settings, logger);
+                var updater = new UpdateManager(settings, logger, commandLineParams);
                 updater.UpdateProgress += (s, e) => bw.ReportProgress(0, e);
                 updater.Update();
             };
@@ -121,7 +122,7 @@ namespace Updater
                     return;
                 }
 
-                RunSingleUpdateFromMultipleInstance(multipleSettings, logger, configurationIndex);
+                RunSingleUpdateFromMultipleInstance(multipleSettings, logger, configurationIndex, commandLineParams);
             };
 
             IsUpdateInProgress = true;
@@ -130,8 +131,8 @@ namespace Updater
 
         private void OnFinishUpdateProcess(bool isError)
         {
-            if (isError || !ApplicationSettings.Current.AutoClose)
-                return;
+            //if (isError || !ApplicationSettings.Current.AutoClose)
+            //    return;
 
             // ugly hack for wait some time before close.
             var bw = new BackgroundWorker();
@@ -145,13 +146,23 @@ namespace Updater
             bw.RunWorkerCompleted += (s, e) =>
             {
                 IsUpdateInProgress = false;
-                Application.Current.Shutdown();
+                bool closeApp = false;
+                CommandLineParams commandLineParams = ApplicationSettings.Current.CommandLineParams;
+                if (commandLineParams != null && commandLineParams.RunFromConsole == true)
+                {
+                    closeApp = true;
+                }else if (ApplicationSettings.Current.AutoClose && !isError)
+                {
+                    closeApp = true;
+                }
+
+                if (closeApp)
+                    Application.Current.Shutdown(isError? 1 : 0);
             };
 
             IsUpdateInProgress = true;
             bw.RunWorkerAsync();
 
-           
         }
 
         protected bool IsUpdateInProgress
@@ -169,6 +180,11 @@ namespace Updater
         {
             UpdateProgressEventArgs e = (UpdateProgressEventArgs)progressArgs.UserState;
             DisplayText += e.Message + Environment.NewLine;
+             CommandLineParams commandLineParams = ApplicationSettings.Current.CommandLineParams;
+            if (commandLineParams != null && commandLineParams.RunFromConsole == true)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         private void RaisePropertyChanged(string propertyName)

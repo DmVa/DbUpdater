@@ -17,7 +17,8 @@ namespace DBUpdater
         private IFileProvider _file;
         private int _executedCount;
         public ILogger _log;
-        public UpdateManager(DbUpdaterConfigurationSection settings, ILogger log)
+        private CommandLineParams _commandLineParams;
+        public UpdateManager(DbUpdaterConfigurationSection settings, ILogger log, CommandLineParams commandLineParams)
         {
             _log = log;
             if (_log == null)
@@ -25,6 +26,7 @@ namespace DBUpdater
             _settings = settings;
             if (settings == null)
                 throw new ArgumentNullException("settings");
+            _commandLineParams = commandLineParams;
         }
 
         public event EventHandler<UpdateProgressEventArgs> UpdateProgress;
@@ -446,8 +448,11 @@ namespace DBUpdater
             StreamReader fileStream = file.OpenText();
             string scriptText = fileStream.ReadToEnd();
             fileStream.Close();
+            string connectionString = _settings.ConnectionString;
+            if (_commandLineParams != null && !string.IsNullOrEmpty(_commandLineParams.ConnectionString))
+                connectionString = _commandLineParams.ConnectionString;
 
-            using (SqlConnection conn = new SqlConnection(_settings.ConnectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 IEnumerable<string> statements = SplitSqlStatements(scriptText);

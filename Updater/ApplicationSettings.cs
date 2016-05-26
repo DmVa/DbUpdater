@@ -1,4 +1,5 @@
-﻿using LogWrapper;
+﻿using DBUpdater.Configuration;
+using LogWrapper;
 
 namespace Updater
 {
@@ -12,7 +13,9 @@ namespace Updater
         {
             get { return _instance; }
         }
-        
+
+        public CommandLineParams CommandLineParams { get; internal set; }
+
         private ApplicationSettings(){}
         
     }
